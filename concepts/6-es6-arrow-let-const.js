@@ -69,60 +69,54 @@ function foo(x, y) {
 foo(5, 4);
 
 //
-function foo(x,y){
+function foo(x, y) {
+  try {
+    let z = x * 2;
+  } catch (error) {
+    console.log(error);
+  }
+  console.log(z);
+}
 
-    try {
-        let z = x*2;
-    } catch (error) {
-        console.log(error);
-    }
-    console.log(z);
- }
- 
- foo(5,4);
+foo(5, 4);
 
- //
- function foo(x,y){
-    let z;
-    try {
-        z = x*2;
-    } catch (error) {
-        console.log(error);
-    }
-    console.log(z);
- }
- 
- foo(5,4);
+//
+function foo(x, y) {
+  let z;
+  try {
+    z = x * 2;
+  } catch (error) {
+    console.log(error);
+  }
+  console.log(z);
+}
 
- 
- //CONST
+foo(5, 4);
 
- const x = [1,2,3];
-x.push(4)
+//CONST
+
+const x = [1, 2, 3];
+x.push(4);
 console.log(x.length); // So values can change, but not assignment
 
 //
 
-const x = Object.freeze([1,2,3]);
+const x = Object.freeze([1, 2, 3]);
 x.push(4);
 
 //
 
 var ob1 = {
-    foo : 1,
-     bar : {
-         value : 2   
-     }
- };
- Object.freeze( ob1 );
-  
- const ob2 = {
-    foo : 1,
-     bar : {
-         value : 2   
-     }
- }
+  foo: 1,
+  bar: {
+    value: 2,
+  },
+};
+Object.freeze(ob1);
 
- 
- 
-
+const ob2 = {
+  foo: 1,
+  bar: {
+    value: 2,
+  },
+};

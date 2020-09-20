@@ -109,5 +109,3 @@ function Person(name) {
 var jane = new Person("jane");
 
 console.log(jane.name); //jane always
-
-
